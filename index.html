@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIZAKI — Gamer &amp; Tech</title>
+    <meta name="description" content="Personal clean website for Kizaki — Gamer, Tech Enthusiast, and Code Crafter featuring dark red crimson accents.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="clean-theme">
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="brand-text">KIZAKI<span class="dot-red">.</span></span>
+            <span class="brand-tag">GAMER / TECH</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#about"><i class="fa-solid fa-user"></i> Profile</a>
+            <a href="#rig"><i class="fa-solid fa-microchip"></i> Specs &amp; Peripherals</a>
+            <a href="#vault"><i class="fa-solid fa-gamepad"></i> Vault</a>
+            <a href="#terminal"><i class="fa-solid fa-terminal"></i> Terminal</a>
+            <a href="#benchmark"><i class="fa-solid fa-gauge-high"></i> Benchmark</a>
+            <a href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+        </nav>
+        <div class="nav-right">
+            <button id="copyDiscordNavBtn" class="btn btn-sm-red"><i class="fa-brands fa-discord"></i> honestly.nived</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section id="about" class="hero-section">
+            <div class="hero-card clean-card">
+                <div class="profile-side">
+                    <div class="profile-frame">
+                        <!-- User Provided Profile Image -->
+                        <img src="profile.jpg" alt="Kizaki Profile Avatar" id="profileImage" class="profile-img">
+                        <div class="frame-glow"></div>
+                        <!-- Live Discord Status Dot on PFP -->
+                        <span class="hero-discord-badge online" id="heroDiscordBadge" title="Discord Status: Online"></span>
+                    </div>
+                    <div class="status-indicator" id="heroStatusPill">
+                        <span class="status-dot"></span> ONLINE &amp; GAMING
+                    </div>
+                </div>
+
+                <div class="info-side">
+                    <div class="hero-header">
+                        <span class="eyebrow-red">PORTFOLIO // KIZAKI</span>
+                        <h1 class="main-title">KIZAKI</h1>
+                    </div>
+                    <p class="hero-sub">
+                        <span class="text-crimson">GAMER</span>
+                    </p>
+                    <p class="hero-bio">
+                        Passionate about gaming, PC hardware, and Tech overall
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#benchmark" class="btn btn-crimson"><i class="fa-solid fa-gauge-high"></i> Explore FPS Benchmark</a>
+                        <a href="#terminal" class="btn btn-outline-dark"><i class="fa-solid fa-terminal"></i> Terminal CLI</a>
+                        <button id="copyDiscordHeroBtn" class="btn btn-outline-red"><i class="fa-brands fa-discord"></i> Copy Discord</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Specs & Peripherals -->
+        <section id="rig" class="section-block">
+            <div class="section-title-wrap">
+                <h2>SPECS AND PERIPHERALS</h2>
+                <span class="section-num">01</span>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-card clean-card">
+                    <i class="fa-solid fa-microchip spec-icon-red"></i>
+                    <div class="spec-info">
+                        <span class="spec-type">PROCESSOR (CPU)</span>
+                        <h4 class="spec-name">AMD Ryzen 5 5500</h4>
+                        <p class="spec-desc">6 Cores / 12 Threads, 4.2GHz Boost for solid gaming &amp; tech tasks.</p>
+                    </div>
+                </div>
+
+                <div class="spec-card clean-card">
+                    <i class="fa-solid fa-vr-cardboard spec-icon-red"></i>
+                    <div class="spec-info">
+                        <span class="spec-type">GRAPHICS (GPU)</span>
+                        <h4 class="spec-name">NVIDIA GTX 1660 OC</h4>
+                        <p class="spec-desc">6GB GDDR6 Factory Overclocked, great 1080p high-refresh gaming.</p>
+                    </div>
+                </div>
+
+                <div class="spec-card clean-card">
+                    <i class="fa-solid fa-memory spec-icon-red"></i>
+                    <div class="spec-info">
+                        <span class="spec-type">MEMORY (RAM)</span>
+                        <h4 class="spec-name">16GB DDR4 RAM</h4>
+                        <p class="spec-desc">Dual-channel high speed memory for smooth multitasking.</p>
+                    </div>
+                </div>
+
+                <div class="spec-card clean-card">
+                    <i class="fa-solid fa-desktop spec-icon-red"></i>
+                    <div class="spec-info">
+                        <span class="spec-type">DISPLAY</span>
+                        <h4 class="spec-name">200Hz Acer Gaming Monitor</h4>
+                        <p class="spec-desc">Ultra-fast 200Hz refresh rate for buttery smooth competitive gameplay.</p>
+                    </div>
+                </div>
+
+                <div class="spec-card clean-card">
+                    <i class="fa-solid fa-computer-mouse spec-icon-red"></i>
+                    <div class="spec-info">
+                        <span class="spec-type">GAMING MOUSE</span>
+                        <h4 class="spec-name">HyperX Pulsefire Haste 2</h4>
+                        <p class="spec-desc">Ultra-lightweight gaming mouse with HyperX 26K DPI precision sensor.</p>
+                    </div>
+                </div>
+
+                <div class="spec-card clean-card">
+                    <i class="fa-solid fa-microphone spec-icon-red"></i>
+                    <div class="spec-info">
+                        <span class="spec-type">MICROPHONE</span>
+                        <h4 class="spec-name">Fifine A6V (AmpliGame)</h4>
+                        <p class="spec-desc">USB condenser gaming microphone with instant tap-to-mute &amp; gain control.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gaming Vault -->
+        <section id="vault" class="section-block">
+            <div class="section-title-wrap">
+                <h2>GAMING VAULT &amp; TOP PICKS</h2>
+                <span class="section-num">02</span>
+            </div>
+
+            <div class="vault-grid">
+                <!-- Game 1: Minecraft -->
+                <div class="game-card clean-card">
+                    <h3 class="game-title">Minecraft</h3>
+                    <div class="game-meta"><span class="badge-tag">Sandbox</span> <span class="badge-tag">Survival</span></div>
+                    <p class="game-summary">"i love it 10/10"</p>
+                    <div class="game-footer">
+                        <span><i class="fa-solid fa-cube"></i> Creative &amp; Survival</span>
+                        <span class="text-crimson">10 / 10</span>
+                    </div>
+                </div>
+
+                <!-- Game 2: Valorant -->
+                <div class="game-card clean-card">
+                    <h3 class="game-title">Valorant</h3>
+                    <div class="game-meta"><span class="badge-tag">Tactical FPS</span> <span class="badge-tag">Co-op</span></div>
+                    <p class="game-summary">"3/10 only with friends lol"</p>
+                    <div class="game-footer">
+                        <span><i class="fa-solid fa-crosshair"></i> 200Hz Esports</span>
+                        <span class="text-crimson">3 / 10</span>
+                    </div>
+                </div>
+
+                <!-- Game 3: Elden Ring -->
+                <div class="game-card clean-card">
+                    <h3 class="game-title">Elden Ring</h3>
+                    <div class="game-meta"><span class="badge-tag">Souls-like</span> <span class="badge-tag">Action RPG</span></div>
+                    <p class="game-summary">"9.9/10 boss of games"</p>
+                    <div class="game-footer">
+                        <span><i class="fa-solid fa-crown"></i> Masterpiece RPG</span>
+                        <span class="text-crimson">9.9 / 10</span>
+                    </div>
+                </div>
+
+                <!-- Game 4: Forza Horizon 6 -->
+                <div class="game-card clean-card">
+                    <h3 class="game-title">Forza Horizon 6</h3>
+                    <div class="game-meta"><span class="badge-tag">Racing</span> <span class="badge-tag">Open World</span></div>
+                    <p class="game-summary">"10/10 visuals are damn good"</p>
+                    <div class="game-footer">
+                        <span><i class="fa-solid fa-car"></i> Ultra Visuals</span>
+                        <span class="text-crimson">10 / 10</span>
+                    </div>
+                </div>
+
+                <!-- Game 5: EA FC 26 -->
+                <div class="game-card clean-card">
+                    <h3 class="game-title">EA FC 26</h3>
+                    <div class="game-meta"><span class="badge-tag">Sports</span> <span class="badge-tag">Competitive</span></div>
+                    <p class="game-summary">"8/10"</p>
+                    <div class="game-footer">
+                        <span><i class="fa-solid fa-futbol"></i> Competitive Play</span>
+                        <span class="text-crimson">8 / 10</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive CLI Terminal -->
+        <section id="terminal" class="section-block">
+            <div class="section-title-wrap">
+                <h2>COMMAND TERMINAL</h2>
+                <span class="section-num">03</span>
+            </div>
+
+            <div class="terminal-card clean-card">
+                <div class="term-header">
+                    <div class="dots-wrap">
+                        <span class="dot red"></span>
+                        <span class="dot grey"></span>
+                        <span class="dot grey"></span>
+                    </div>
+                    <span class="term-title">kizaki@dev-rig:~</span>
+                    <button id="clearTermBtn" class="clear-btn"><i class="fa-solid fa-eraser"></i> Clear</button>
+                </div>
+
+                <div class="term-body" id="termOutput">
+                    <div class="term-row system">
+                        Welcome to <span class="text-crimson">KIZAKI CLI v3.0</span> [Clean White Environment]
+                    </div>
+                    <div class="term-row system">
+                        Type <span class="text-crimson">'help'</span> for available commands or use the shortcut buttons below.
+                    </div>
+                    <div class="term-row">
+                        <span class="prompt">kizaki@dev-rig:~$</span> <span class="input-text">about</span>
+                    </div>
+                    <div class="term-row response">
+                        ▶ User: Kizaki (Male) | Role: Gamer &amp; Tech Enthusiast<br>
+                        ▶ Focus: High-FPS competitive gaming, clean UI/UX code, custom hardware.<br>
+                        ▶ Status: Ready for co-op games &amp; tech collaborations.
+                    </div>
+                </div>
+
+                <div class="term-shortcuts">
+                    <button class="chip-btn" data-cmd="help">help</button>
+                    <button class="chip-btn" data-cmd="specs">specs</button>
+                    <button class="chip-btn" data-cmd="games">games</button>
+                    <button class="chip-btn" data-cmd="socials">socials</button>
+                    <button class="chip-btn" data-cmd="clear">clear</button>
+                </div>
+
+                <form id="termForm" class="term-input-bar">
+                    <span class="prompt">kizaki@dev-rig:~$</span>
+                    <input type="text" id="termInput" placeholder="Type a command (e.g. help, specs, games)..." autocomplete="off">
+                    <button type="submit" class="send-btn"><i class="fa-solid fa-terminal"></i> Exec</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Hardware FPS Benchmark -->
+        <section id="benchmark" class="section-block">
+            <div class="section-title-wrap">
+                <h2>HARDWARE FPS BENCHMARK</h2>
+                <span class="section-num">04</span>
+            </div>
+
+            <div class="benchmark-container">
+                <!-- FPS Estimator Card -->
+                <div class="bench-card clean-card">
+                    <div class="card-head">
+                        <h3><i class="fa-solid fa-gauge-high text-crimson"></i> RIG FPS ESTIMATOR</h3>
+                        <span class="sub-text">GTX 1660 OC + Ryzen 5 5500 Performance</span>
+                    </div>
+
+                    <div class="bench-form">
+                        <div class="form-group">
+                            <label>SELECT GAME</label>
+                            <select id="benchGame" class="bench-select">
+                                <option value="minecraft" selected>Minecraft</option>
+                                <option value="valorant">Valorant</option>
+                                <option value="elden">Elden Ring</option>
+                                <option value="forza">Forza Horizon 6</option>
+                                <option value="easports">EA FC 26</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>RESOLUTION</label>
+                            <select id="benchRes" class="bench-select">
+                                <option value="1080p" selected>1080p</option>
+                                <option value="1440p">1440p</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="fps-output-box">
+                        <div class="fps-main">
+                            <span class="fps-num text-crimson" id="fpsNum">210</span>
+                            <span class="fps-unit">ESTIMATED FPS</span>
+                        </div>
+                        <div class="fps-metrics">
+                            <div><span class="metric-lbl">FRAME TIME</span><strong id="fpsFrameTime" class="metric-val">4.7 ms</strong></div>
+                            <div><span class="metric-lbl">GPU UTILIZATION</span><strong id="fpsGpuUtil" class="metric-val">98%</strong></div>
+                            <div><span class="metric-lbl">SETTINGS PRESET</span><strong id="fpsPreset" class="metric-val">Ray Tracing Ultra</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Socials & Direct Contact -->
+        <section id="contact" class="section-block">
+            <div class="section-title-wrap">
+                <h2>CONNECT WITH KIZAKI &amp; LIVE DISCORD ACTIVITY</h2>
+                <span class="section-num">05</span>
+            </div>
+
+            <!-- Discord Rich Presence Live Presence Card -->
+            <div class="discord-presence-card clean-card">
+                <div class="presence-header">
+                    <div class="presence-user">
+                        <div class="presence-avatar-wrap">
+                            <img src="profile.jpg" alt="Discord Avatar" id="discordAvatar" class="presence-avatar">
+                            <span class="status-badge online" id="discordStatusBadge"></span>
+                        </div>
+                        <div class="presence-names">
+                            <h3 id="discordUsername">Kizaki</h3>
+                            <span class="presence-tag" id="discordTag">@honestly.nived</span>
+                        </div>
+                    </div>
+                    <div class="presence-status-text" id="discordStatusText">
+                        <span class="status-pill online" id="discordStatusPill">🟢 ONLINE</span>
+                    </div>
+                </div>
+
+                <div class="presence-body" id="discordActivityBox">
+                    <div class="activity-icon-box">
+                        <i class="fa-solid fa-gamepad activity-icon text-crimson" id="activityIcon"></i>
+                    </div>
+                    <div class="activity-details">
+                        <span class="activity-type" id="activityType">CURRENT ACTIVITY</span>
+                        <h4 class="activity-name" id="activityName">Hollow Knight</h4>
+                        <p class="activity-state" id="activityState">Exploring City of Tears • High FPS</p>
+                        <span class="activity-time" id="activityTime">Elapsed: 42 mins</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="socials-grid">
+                <div class="social-card clean-card" onclick="KizakiApp.copyDiscord()">
+                    <i class="fa-brands fa-discord social-icon text-crimson"></i>
+                    <div>
+                        <h4 class="social-name">Discord Handle</h4>
+                        <span class="social-sub" id="discordHandle">honestly.nived</span>
+                    </div>
+                    <span class="card-action-red">Click to Copy</span>
+                </div>
+
+                <div class="social-card clean-card" id="spotifySocialCard" style="display: flex;">
+                    <i class="fa-brands fa-spotify social-icon text-spotify" id="spotifyIcon" style="color: #1ed760;"></i>
+                    <div id="spotifyDetails">
+                        <h4 class="social-name" id="spotifyCardTitle">Spotify Live</h4>
+                        <span class="social-sub" id="spotifyCardSub">Listening to Spotify</span>
+                    </div>
+                    <span class="card-action-spotify" id="spotifyActionTag" style="color: #1ed760; font-weight: 800; font-size: 0.7rem; position: absolute; right: 14px; bottom: 14px;">🎵 Live Sync</span>
+                </div>
+
+                <a href="https://steamcommunity.com" target="_blank" rel="noopener" class="social-card clean-card">
+                    <i class="fa-brands fa-steam social-icon"></i>
+                    <div>
+                        <h4 class="social-name">Steam Profile</h4>
+                        <span class="social-sub">Kizaki [Gaming Rig]</span>
+                    </div>
+                    <span class="card-action-dark">View Profile</span>
+                </a>
+
+                <a href="https://github.com/nivveeeddd/nivedbio" target="_blank" rel="noopener" class="social-card clean-card">
+                    <i class="fa-brands fa-github social-icon"></i>
+                    <div>
+                        <h4 class="social-name">GitHub Repo</h4>
+                        <span class="social-sub">nivveeeddd/nivedbio</span>
+                    </div>
+                    <span class="card-action-dark">View Repo</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 <strong>KIZAKI</strong>. Clean White &amp; Crimson Theme.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-check-circle"></i> <span id="toastMsg">Discord Tag Copied!</span>
+    </div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>
