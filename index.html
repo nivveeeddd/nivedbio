@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIZAKI — Gamer &amp; Tech</title>
-    <meta name="description" content="Personal clean website for Kizaki — Gamer, Tech Enthusiast, and Code Crafter featuring dark red crimson accents.">
+    <title>NIVED — Gamer &amp; Tech</title>
+    <meta name="description" content="Personal clean website for Nived — Gamer, Tech Enthusiast, and Code Crafter featuring dark red crimson accents.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
     <!-- Navbar -->
     <header class="navbar">
         <div class="logo">
-            <span class="brand-text">KIZAKI<span class="dot-red">.</span></span>
+            <span class="brand-text">NIVED<span class="dot-red">.</span></span>
             <span class="brand-tag">GAMER / TECH</span>
         </div>
         <nav class="nav-links">
@@ -44,7 +44,7 @@
                 <div class="profile-side">
                     <div class="profile-frame">
                         <!-- User Provided Profile Image -->
-                        <img src="profile.jpg" alt="Kizaki Profile Avatar" id="profileImage" class="profile-img">
+                        <img src="profile.jpg" alt="Nived Profile Avatar" id="profileImage" class="profile-img">
                         <div class="frame-glow"></div>
                         <!-- Live Discord Status Dot on PFP -->
                         <span class="hero-discord-badge online" id="heroDiscordBadge" title="Discord Status: Online"></span>
@@ -56,24 +56,46 @@
 
                 <div class="info-side">
                     <div class="hero-header">
-                        <span class="eyebrow-red">PORTFOLIO // KIZAKI</span>
-                        <h1 class="main-title">KIZAKI</h1>
+                        <span class="eyebrow-red">PORTFOLIO // NIVED</span>
+                        <h1 class="main-title">NIVED</h1>
                     </div>
                     <p class="hero-sub">
                         <span class="text-crimson">GAMER</span>
                     </p>
                     <p class="hero-bio">
                         Passionate about gaming, PC hardware, and Tech overall
-                    </p>
-
-                    <div class="hero-buttons">
-                        <a href="#benchmark" class="btn btn-crimson"><i class="fa-solid fa-gauge-high"></i> Explore FPS Benchmark</a>
-                        <a href="#terminal" class="btn btn-outline-dark"><i class="fa-solid fa-terminal"></i> Terminal CLI</a>
-                        <button id="copyDiscordHeroBtn" class="btn btn-outline-red"><i class="fa-brands fa-discord"></i> Copy Discord</button>
-                    </div>
                 </div>
             </div>
-        </section>
+        <!-- Live Discord Rich Presence Banner -->
+        <div class="discord-presence-card clean-card" style="margin-bottom: 2.5rem;">
+            <div class="presence-header">
+                <div class="presence-user">
+                    <div class="presence-avatar-wrap">
+                        <img src="profile.jpg" alt="Discord Avatar" id="discordAvatar" class="presence-avatar">
+                        <span class="status-badge online" id="discordStatusBadge"></span>
+                    </div>
+                    <div class="presence-names">
+                        <h3 id="discordUsername">Nived</h3>
+                        <span class="presence-tag" id="discordTag">@honestly.nived</span>
+                    </div>
+                </div>
+                <div class="presence-status-text" id="discordStatusText">
+                    <span class="status-pill online" id="discordStatusPill">🟢 ONLINE</span>
+                </div>
+            </div>
+
+            <div class="presence-body" id="discordActivityBox">
+                <div class="activity-icon-box">
+                    <i class="fa-solid fa-gamepad activity-icon text-crimson" id="activityIcon"></i>
+                </div>
+                <div class="activity-details">
+                    <span class="activity-type" id="activityType">CURRENT ACTIVITY</span>
+                    <h4 class="activity-name" id="activityName">Hollow Knight</h4>
+                    <p class="activity-state" id="activityState">Exploring City of Tears • High FPS</p>
+                    <span class="activity-time" id="activityTime">Elapsed: 42 mins</span>
+                </div>
+            </div>
+        </div>
 
         <!-- Tech Specs & Peripherals -->
         <section id="rig" class="section-block">
@@ -218,22 +240,22 @@
                         <span class="dot grey"></span>
                         <span class="dot grey"></span>
                     </div>
-                    <span class="term-title">kizaki@dev-rig:~</span>
+                    <span class="term-title">nived@dev-rig:~</span>
                     <button id="clearTermBtn" class="clear-btn"><i class="fa-solid fa-eraser"></i> Clear</button>
                 </div>
 
                 <div class="term-body" id="termOutput">
                     <div class="term-row system">
-                        Welcome to <span class="text-crimson">KIZAKI CLI v3.0</span> [Clean White Environment]
+                        Welcome to <span class="text-crimson">NIVED CLI v3.0</span> [Clean White Environment]
                     </div>
                     <div class="term-row system">
                         Type <span class="text-crimson">'help'</span> for available commands or use the shortcut buttons below.
                     </div>
                     <div class="term-row">
-                        <span class="prompt">kizaki@dev-rig:~$</span> <span class="input-text">about</span>
+                        <span class="prompt">nived@dev-rig:~$</span> <span class="input-text">about</span>
                     </div>
                     <div class="term-row response">
-                        ▶ User: Kizaki (Male) | Role: Gamer &amp; Tech Enthusiast<br>
+                        ▶ User: Nived (Male) | Role: Gamer &amp; Tech Enthusiast<br>
                         ▶ Focus: High-FPS competitive gaming, clean UI/UX code, custom hardware.<br>
                         ▶ Status: Ready for co-op games &amp; tech collaborations.
                     </div>
@@ -248,7 +270,7 @@
                 </div>
 
                 <form id="termForm" class="term-input-bar">
-                    <span class="prompt">kizaki@dev-rig:~$</span>
+                    <span class="prompt">nived@dev-rig:~$</span>
                     <input type="text" id="termInput" placeholder="Type a command (e.g. help, specs, games)..." autocomplete="off">
                     <button type="submit" class="send-btn"><i class="fa-solid fa-terminal"></i> Exec</button>
                 </form>
@@ -309,40 +331,8 @@
         <!-- Socials & Direct Contact -->
         <section id="contact" class="section-block">
             <div class="section-title-wrap">
-                <h2>CONNECT WITH KIZAKI &amp; LIVE DISCORD ACTIVITY</h2>
+                <h2>CONNECT WITH NIVED</h2>
                 <span class="section-num">05</span>
-            </div>
-
-            <!-- Discord Rich Presence Live Presence Card -->
-            <div class="discord-presence-card clean-card">
-                <div class="presence-header">
-                    <div class="presence-user">
-                        <div class="presence-avatar-wrap">
-                            <img src="profile.jpg" alt="Discord Avatar" id="discordAvatar" class="presence-avatar">
-                            <span class="status-badge online" id="discordStatusBadge"></span>
-                        </div>
-                        <div class="presence-names">
-                            <h3 id="discordUsername">Kizaki</h3>
-                            <span class="presence-tag" id="discordTag">@honestly.nived</span>
-                        </div>
-                    </div>
-                    <div class="presence-status-text" id="discordStatusText">
-                        <span class="status-pill online" id="discordStatusPill">🟢 ONLINE</span>
-                    </div>
-                </div>
-
-                <div class="presence-body" id="discordActivityBox">
-                    <div class="activity-icon-box">
-                        <i class="fa-solid fa-gamepad activity-icon text-crimson" id="activityIcon"></i>
-                    </div>
-                    <div class="activity-details">
-                        <span class="activity-type" id="activityType">CURRENT ACTIVITY</span>
-                        <h4 class="activity-name" id="activityName">Hollow Knight</h4>
-                        <p class="activity-state" id="activityState">Exploring City of Tears • High FPS</p>
-                        <span class="activity-time" id="activityTime">Elapsed: 42 mins</span>
-                    </div>
-                </div>
-
             </div>
 
             <div class="socials-grid">
@@ -364,13 +354,13 @@
                     <span class="card-action-spotify" id="spotifyActionTag" style="color: #1ed760; font-weight: 800; font-size: 0.7rem; position: absolute; right: 14px; bottom: 14px;">🎵 Live Sync</span>
                 </div>
 
-                <a href="https://steamcommunity.com" target="_blank" rel="noopener" class="social-card clean-card">
-                    <i class="fa-brands fa-steam social-icon"></i>
+                <a href="https://www.youtube.com/@kizaki_r7" target="_blank" rel="noopener" class="social-card clean-card">
+                    <i class="fa-brands fa-youtube social-icon text-crimson"></i>
                     <div>
-                        <h4 class="social-name">Steam Profile</h4>
-                        <span class="social-sub">Kizaki [Gaming Rig]</span>
+                        <h4 class="social-name">YouTube Channel</h4>
+                        <span class="social-sub">@kizaki_r7</span>
                     </div>
-                    <span class="card-action-dark">View Profile</span>
+                    <span class="card-action-red">View Channel</span>
                 </a>
 
                 <a href="https://github.com/nivveeeddd/nivedbio" target="_blank" rel="noopener" class="social-card clean-card">
@@ -388,7 +378,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 <strong>KIZAKI</strong>. Clean White &amp; Crimson Theme.</p>
+            <p>&copy; 2026 <strong>NIVED</strong>. Clean White &amp; Crimson Theme.</p>
         </div>
     </footer>
 

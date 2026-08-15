@@ -42,13 +42,13 @@ const KizakiApp = (function () {
        ---------------------------------------------------------------------- */
     const commands = {
         help: `Available commands:<br>
-        • <span class="text-crimson">about</span> - Kizaki user profile<br>
+        • <span class="text-crimson">about</span> - Nived user profile<br>
         • <span class="text-crimson">specs</span> - Hardware &amp; PC specs<br>
         • <span class="text-crimson">games</span> - Top gaming picks<br>
-        • <span class="text-crimson">socials</span> - View Discord &amp; Steam handles<br>
+        • <span class="text-crimson">socials</span> - View Discord &amp; YouTube handles<br>
         • <span class="text-crimson">clear</span> - Clear output`,
 
-        about: `▶ <strong>NAME:</strong> Kizaki (Male)<br>
+        about: `▶ <strong>NAME:</strong> Nived (Male)<br>
         ▶ <strong>FOCUS:</strong> Gaming, PC hardware, and Tech overall`,
 
         specs: `💻 <strong>GAMING &amp; TECH SPECS:</strong><br>
@@ -59,7 +59,7 @@ const KizakiApp = (function () {
         • MOUSE: HyperX Pulsefire Haste 2<br>
         • MIC: Fifine A6V (AmpliGame)`,
 
-        games: `🎮 <strong>KIZAKI'S GAMING VAULT:</strong><br>
+        games: `🎮 <strong>NIVED'S GAMING VAULT:</strong><br>
         1. Minecraft [10/10 - "i love it 10/10"]<br>
         2. Elden Ring [9.9/10 - "boss of games"]<br>
         3. Forza Horizon 6 [10/10 - "visuals are damn good"]<br>
@@ -68,7 +68,7 @@ const KizakiApp = (function () {
 
         socials: `🌐 <strong>CONTACT HANDLES:</strong><br>
         • Discord: <span class="text-crimson">honestly.nived</span><br>
-        • Steam: <span class="text-crimson">Kizaki [Gaming Rig]</span><br>
+        • YouTube: <span class="text-crimson">@kizaki_r7</span><br>
         • GitHub: <span class="text-crimson">@nivveeeddd</span>`
     };
 
@@ -273,7 +273,7 @@ const KizakiApp = (function () {
 
         // Activities & Spotify Sync
         const actBox = document.getElementById('discordActivityBox');
-        const actIcon = document.getElementById('activityIcon');
+        const iconBox = document.querySelector('.activity-icon-box');
         const spotTitle = document.getElementById('spotifyCardTitle');
         const spotSub = document.getElementById('spotifyCardSub');
 
@@ -284,9 +284,9 @@ const KizakiApp = (function () {
 
         if (data.listening_to_spotify) {
             const s = data.spotify;
-            if (actIcon) {
-                actIcon.className = 'fa-brands fa-spotify activity-icon';
-                actIcon.style.color = '#1ed760';
+            if (iconBox) {
+                const spotImg = s.album_art_url ? `<img src="${s.album_art_url}" alt="Album Art" class="activity-game-logo">` : `<i class="fa-brands fa-spotify activity-icon" style="color: #1ed760;"></i>`;
+                iconBox.innerHTML = spotImg;
             }
             if (actType) actType.textContent = 'LISTENING TO SPOTIFY';
             if (actName) actName.textContent = s.song;
@@ -298,9 +298,8 @@ const KizakiApp = (function () {
             if (spotSub) spotSub.textContent = `by ${s.artist}`;
         } else if (data.activities && data.activities.length > 0) {
             const a = data.activities.find(x => x.type === 0) || data.activities[0];
-            if (actIcon) {
-                actIcon.className = 'fa-solid fa-gamepad activity-icon text-crimson';
-                actIcon.style.color = '';
+            if (iconBox) {
+                iconBox.innerHTML = getGameLogoHTML(a);
             }
             if (actType) actType.textContent = a.type === 0 ? 'PLAYING GAME' : 'LIVE ACTIVITY';
             if (actName) actName.textContent = a.name;
@@ -310,9 +309,8 @@ const KizakiApp = (function () {
             if (spotTitle) spotTitle.textContent = 'Spotify Live';
             if (spotSub) spotSub.textContent = 'Not currently playing Spotify';
         } else {
-            if (actIcon) {
-                actIcon.className = 'fa-solid fa-gamepad activity-icon text-crimson';
-                actIcon.style.color = '';
+            if (iconBox) {
+                iconBox.innerHTML = `<i class="fa-solid fa-gamepad activity-icon text-crimson"></i>`;
             }
             if (actType) actType.textContent = 'CURRENT STATUS';
             if (actName) actName.textContent = 'Chilling / Coding';
@@ -324,8 +322,40 @@ const KizakiApp = (function () {
         }
     }
 
+    function getGameLogoHTML(activity) {
+        if (!activity) return '<i class="fa-solid fa-gamepad activity-icon text-crimson"></i>';
+
+        // Check Discord Rich Presence Assets
+        if (activity.assets && activity.assets.large_image && activity.application_id) {
+            let imgUrl = activity.assets.large_image;
+            if (imgUrl.startsWith('mp:external/')) {
+                imgUrl = `https://media.discordapp.net/${imgUrl.replace('mp:external/', '')}`;
+            } else if (imgUrl.startsWith('spotify:')) {
+                imgUrl = `https://i.scdn.co/image/${imgUrl.replace('spotify:', '')}`;
+            } else {
+                imgUrl = `https://cdn.discordapp.com/app-assets/${activity.application_id}/${imgUrl}.png`;
+            }
+            return `<img src="${imgUrl}" alt="${activity.name}" class="activity-game-logo">`;
+        }
+
+        const gName = (activity.name || '').toLowerCase();
+        if (gName.includes('minecraft')) {
+            return '<i class="fa-solid fa-cube activity-icon text-crimson" title="Minecraft"></i>';
+        } else if (gName.includes('valorant')) {
+            return '<i class="fa-solid fa-crosshair activity-icon text-crimson" title="Valorant"></i>';
+        } else if (gName.includes('elden')) {
+            return '<i class="fa-solid fa-crown activity-icon text-crimson" title="Elden Ring"></i>';
+        } else if (gName.includes('forza')) {
+            return '<i class="fa-solid fa-car activity-icon text-crimson" title="Forza Horizon"></i>';
+        } else if (gName.includes('ea') || gName.includes('fifa') || gName.includes('fc')) {
+            return '<i class="fa-solid fa-futbol activity-icon text-crimson" title="EA FC 26"></i>';
+        }
+
+        return '<i class="fa-solid fa-gamepad activity-icon text-crimson"></i>';
+    }
+
     function idName(data) {
-        return data.discord_user.global_name || data.discord_user.username || 'Kizaki';
+        return data.discord_user.global_name || data.discord_user.username || 'Nived';
     }
 
     /* ----------------------------------------------------------------------
